@@ -96,7 +96,7 @@ const Main: React.FC = () => {
                     <Card.Title
                       titleStyle={styles.cardTitle}
                       titleNumberOfLines={2}
-                      title={cliente.nome}
+                      title={cliente.userName}
                       subtitleStyle={styles.cardSubTitle}
                       subtitleNumberOfLines={3}
                       subtitle={sub}
