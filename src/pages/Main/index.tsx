@@ -28,9 +28,6 @@ import {ScrollView} from 'react-native-gesture-handler';
 
 const isAndroid = Platform.OS === 'android';
 
-const BleManagerModule = NativeModules.BleManager;
-const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
-
 const baseURLFaker = axios.create({
   baseURL: 'https://bulb-api.azurewebsites.net/',
 });
@@ -51,7 +48,7 @@ const Main: React.FC = () => {
     const {data} = resp;
     console.log(data);
     data.DataHoraEmbarque = new Date(data.DataHoraEmbarque);
-    data.DataHoraEmbarque = data.DataHoraEmbarque
+    data.DataHoraEmbarque = data.DataHoraEmbarque;
     setClientes(data);
   };
 
